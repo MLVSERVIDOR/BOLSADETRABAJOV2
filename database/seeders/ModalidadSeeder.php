@@ -56,19 +56,19 @@ class ModalidadSeeder extends Seeder
                 'nombre' => 'Presencial',
                 'descripcion' => 'Trabajo realizado de manera presencial en las instalaciones.',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Remoto',
                 'descripcion' => 'Trabajo realizado completamente desde casa o fuera de la oficina.',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Híbrido',
                 'descripcion' => 'Combinación de trabajo remoto y presencial.',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
         ]);
     }

@@ -21,7 +21,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Puestos relacionados con administración, atención al cliente y soporte organizacional.',
                 'icono' => 'fa-solid fa-briefcase',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Construcción',
@@ -30,7 +30,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Actividades en obras civiles, mantenimiento y construcción de infraestructuras.',
                 'icono' => 'fa-solid fa-hammer',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Finanzas',
@@ -39,7 +39,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Gestión de presupuestos, contabilidad y procesos financieros.',
                 'icono' => 'fa-solid fa-coins',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Logística',
@@ -48,7 +48,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Planificación, transporte, distribución y control de inventarios.',
                 'icono' => 'fa-solid fa-truck',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Salud',
@@ -57,7 +57,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Atención médica, enfermería, laboratorio y áreas de salud pública.',
                 'icono' => 'fa-solid fa-stethoscope',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Tecnología',
@@ -66,7 +66,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Desarrollo de software, soporte técnico y análisis de sistemas.',
                 'icono' => 'fa-solid fa-laptop-code',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Educación',
@@ -75,7 +75,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Formación académica, capacitación y enseñanza.',
                 'icono' => 'fa-solid fa-graduation-cap',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Confección',
@@ -84,7 +84,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Confección y diseño de prendas textiles.',
                 'icono' => 'fa-solid fa-scissors',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Seguridad',
@@ -93,7 +93,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Seguridad ciudadana, patrullaje y control de accesos.',
                 'icono' => 'fa-solid fa-shield-halved',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
             [
                 'nombre' => 'Restaurante',
@@ -102,7 +102,7 @@ class CategoriaOcupacionalSeeder extends Seeder
                 'descripcion' => 'Atención en restaurantes, cocina y servicio al cliente.',
                 'icono' => 'fa-solid fa-utensils',
                 'estado' => 1,
-                'created_at' => now(),
+                
             ],
         ]);
     }

@@ -18,19 +18,19 @@ class EtapasSeeder extends Seeder
             'nombre' => 'Pendiente',
             'descripcion' => 'La solicitud está pendiente de revisión.',
             'estado' => '1',
-            'created_at' => now()
+            
             ],
             [
             'nombre' => 'Aprobado',
             'descripcion' => 'La solicitud ha sido aprobada.',
             'estado' => '1',
-            'created_at' => now()
+            
             ],
             [
             'nombre' => 'Rechazado',
             'descripcion' => 'La solicitud ha sido rechazada.',
             'estado' => '1',
-            'created_at' => now()
+            
             ],
         ]);
         

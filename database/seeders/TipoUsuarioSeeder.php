@@ -14,8 +14,8 @@ class TipoUsuarioSeeder extends Seeder
     public function run(): void
     {
         DB::table('tipo_usuarios')->insert([
-            ['nombre' => 'persona', 'descripcion' => 'Usuario tipo persona', 'estado' => '1', 'created_at' => now(), 'updated_at' => now()],
-            ['nombre' => 'empresa', 'descripcion' => 'Usuario tipo empresa', 'estado' => '1', 'created_at' => now(), 'updated_at' => now()],
+            ['nombre' => 'persona', 'descripcion' => 'Usuario tipo persona', 'estado' => '1'],
+            ['nombre' => 'empresa', 'descripcion' => 'Usuario tipo empresa', 'estado' => '1'],
         ]);
     }
 }

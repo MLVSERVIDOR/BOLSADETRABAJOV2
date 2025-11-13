@@ -110,6 +110,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('anuncio-laboral/actualizar-etapa', [AnuncioLaboralController::class, 'actualizarEtapa'])->name('anuncio-laboral.actualizar-etapa');
 
 
+
+
+
+    
     // : : : : : : : : : : : : : : : PERFIL : : : : : : : : : : : : : : : : :
 
     Route::get('/perfil', [PerfilController::class, 'index'])->name('perfil.index');

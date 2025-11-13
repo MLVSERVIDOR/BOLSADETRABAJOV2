@@ -72,13 +72,13 @@
                                                                     <div class="col-md-12 col-12">
                                                                         <div class="mb-1">
                                                                             <label class="form-label" for="name">DNI</label>
-                                                                            <input type="text" id="dni" class="form-control" name="dni" required>
+                                                                            <input type="text" id="nro_documento" class="form-control" name="nro_documento" required>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-12 col-12">
                                                                         <div class="mb-1">
-                                                                            <label class="form-label" for="user_name">Usuario</label>
-                                                                            <input type="text" id="user_name" class="form-control" name="user_name" required>
+                                                                            <label class="form-label" for="user_name">Correo</label>
+                                                                            <input type="email" id="email" class="form-control" name="email" required>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-12 col-12">

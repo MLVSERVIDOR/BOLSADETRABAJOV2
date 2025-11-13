@@ -38,11 +38,11 @@ class UsuarioController extends Controller
         $query = "
             SELECT 
                 users.id AS id,
-                users.name as nombre,
+                users.nombres as nombre,
                 users.apellido_paterno as apellido_paterno, 
                 users.apellido_materno as apellido_materno,
-                users.dni as dni, 
-                users.user_name AS users_usuario,
+                users.nro_documento as dni, 
+                users.email AS email,
                 roles.name AS role_nombre
             FROM users
             INNER JOIN model_has_roles ON users.id = model_has_roles.model_id
@@ -52,7 +52,7 @@ class UsuarioController extends Controller
     
         // Añadir filtros de búsqueda
         if ($search) {
-            $query .= " WHERE (users.name LIKE ? OR users.apellido_paterno LIKE ? OR users.apellido_materno LIKE ? OR users.dni LIKE ? OR users.user_name LIKE ? OR roles.name LIKE ?)";
+            $query .= " WHERE (users.name LIKE ? OR users.apellido_paterno LIKE ? OR users.apellido_materno LIKE ? OR users.nro_documento LIKE ? OR users.email LIKE ? OR roles.name LIKE ?)";
             $params[] = "%$search%";
             $params[] = "%$search%";
             $params[] = "%$search%";
@@ -120,42 +120,72 @@ class UsuarioController extends Controller
         return view('usuarios.crear', compact('roles'));
     }
 
+    // public function store(Request $request)
+    // {
+        
+    //     try {
+    //         // 🔹 Validaciones
+    //         $request->validate([
+    //             'name'             => 'required|string|max:255',
+    //             'apellido_paterno' => 'required|string|max:255',
+    //             'apellido_materno' => 'required|string|max:255',
+    //             'nro_documento'   => 'required|string|max:20',
+    //             'email'        => 'required|string|max:255|unique:users,email',
+    //             'password'         => 'required|same:confirm-password',
+    //             'roles'            => 'required'
+    //         ]);
+
+    //         // 🔹 Crear usuario
+    //         $user = new User();
+    //         $user->name             = $request->input('name');
+    //         $user->apellido_paterno = $request->input('apellido_paterno');
+    //         $user->apellido_materno = $request->input('apellido_materno');
+    //         $user->nro_documento              = $request->input('nro_documento');
+    //         $user->email        = $request->input('email');
+    //         $user->password         = Hash::make($request->input('password'));
+    //         $user->save();
+
+    //         // 🔹 Asignar rol
+    //         $user->assignRole($request->input('roles'));
+
+    //         return redirect()->route('usuarios.index')
+    //             ->with('success', 'Usuario creado correctamente.');
+            
+    //     } catch (\Exception $e) {
+    //         return redirect()->route('usuarios.index')
+    //             ->with('error', 'Ocurrió un error al registrar el usuario.');
+    //     }
+    // }
+
     public function store(Request $request)
     {
-        try {
-            // 🔹 Validaciones
-            $request->validate([
-                'name'             => 'required|string|max:255',
-                'apellido_paterno' => 'required|string|max:255',
-                'apellido_materno' => 'required|string|max:255',
-                'dni'              => 'required|string|max:20',
-                'user_name'        => 'required|string|max:255|unique:users,user_name',
-                'password'         => 'required|same:confirm-password',
-                'roles'            => 'required'
-            ]);
+        // 🔹 Validaciones
+        $request->validate([
+            'name'             => 'required|string|max:255',
+            'apellido_paterno' => 'required|string|max:255',
+            'apellido_materno' => 'required|string|max:255',
+            'nro_documento'    => 'required|string|max:20',
+            'email'            => 'required|string|max:255|unique:users,email',
+            'password'         => 'required|same:confirm-password',
+            'roles'            => 'required'
+        ]);
 
-            // 🔹 Crear usuario
-            $user = new User();
-            $user->name             = $request->input('name');
-            $user->apellido_paterno = $request->input('apellido_paterno');
-            $user->apellido_materno = $request->input('apellido_materno');
-            $user->dni              = $request->input('dni');
-            $user->user_name        = $request->input('user_name');
-            $user->password         = Hash::make($request->input('password'));
-            $user->save();
+        // 🔹 Crear usuario
+        $user = new User();
+        $user->nombres          = $request->input('name');
+        $user->apellido_paterno = $request->input('apellido_paterno');
+        $user->apellido_materno = $request->input('apellido_materno');
+        $user->nro_documento    = $request->input('nro_documento');
+        $user->email            = $request->input('email');
+        $user->password         = Hash::make($request->input('password'));
+        $user->save();
 
-            // 🔹 Asignar rol
-            $user->assignRole($request->input('roles'));
+        // 🔹 Asignar rol
+        $user->assignRole($request->input('roles'));
 
-            return redirect()->route('usuarios.index')
-                ->with('success', 'Usuario creado correctamente.');
-            
-        } catch (\Exception $e) {
-            return redirect()->route('usuarios.index')
-                ->with('error', 'Ocurrió un error al registrar el usuario.');
-        }
+        return redirect()->route('usuarios.index')
+            ->with('success', 'Usuario creado correctamente.');
     }
-
 
     public function updatePermissions(Request $request, $id)
     {

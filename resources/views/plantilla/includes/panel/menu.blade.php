@@ -23,9 +23,39 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
             <li class="nav-item">
+            </li>
 
 
-            @can('ver-qr')
+            <li class="nav-item" @if(!auth()->user()->can('ver-usuario') && !auth()->user()->can('ver-rol') && !auth()->user()->can('ver-modulo')) style="display: none;" @endif>
+                <a class="d-flex align-items-center" href="#"><i data-feather='lock'></i><span class="menu-title text-truncate" data-i18n="eCommerce">Administrador</span></a>
+                <ul class="menu-content">
+                    @can('ver-usuario')
+                        <li>
+                            <a class="d-flex align-items-center" href="{{ url('/usuarios') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Shop">Usuario</span></a>
+                        </li>
+                    @endcan
+                    @can('ver-rol')
+                        <li>
+                            <a class="d-flex align-items-center" href="{{ url('/roles') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Details">Roles</span></a>
+                        </li>
+                    @endcan
+                    @can('ver-modulo')
+                        <li>
+                            <a class="d-flex align-items-center" href="{{ url('/modules') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Modulo</span></a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+                
+
+
+
+
+
+
+
+
+            @can('ver-categoria')
             <li class="nav-item">
                 <a class="d-flex align-items-center" href="#"><i data-feather='file-text'></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Configuracion</span></a>
                 <ul class="menu-content">
@@ -36,7 +66,7 @@
             </li>
             @endcan
 
-            @can('ver-qr')
+            @can('ver-categoria')
             <li class="nav-item">
                 <a class="d-flex align-items-center" href="#"><i data-feather='file-text'></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Anuncios Laboral</span></a>
                 <ul class="menu-content">

@@ -5,7 +5,7 @@
         <td>{{ $usuario->apellido_paterno }}</td>
         <td>{{ $usuario->apellido_materno }}</td>
         <td>{{ $usuario->dni }}</td>
-        <td>{{ $usuario->users_usuario }}</td>
+        <td>{{ $usuario->email }}</td>
         <td>
             @if (!empty($usuario->role_nombre))
                 <span class="badge badge-light-success">{{ $usuario->role_nombre }}</span>

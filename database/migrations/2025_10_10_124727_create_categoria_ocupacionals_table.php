@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre')->nullable();
             $table->string('sub_nombre')->nullable();
-            $table->string('vacantes')->nullable();
+            $table->integer('vacantes')->nullable();
             $table->string('descripcion')->nullable();
             $table->string('icono')->nullable();
             $table->string('estado')->default('1'); // 1: activo, 0: inactivo

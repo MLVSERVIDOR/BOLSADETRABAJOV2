@@ -20,29 +20,25 @@ class TipoDocumentoSeeder extends Seeder
                 'nombre' => 'DNI', 
                 'descripcion' => 'DNI', // Opcional: ajusta si tienes esta columna
                 'estado' => '1',
-                'created_at' => Carbon::now(), 
-                'updated_at' => Carbon::now()
+                
             ],
             [
                 'nombre' => 'Carnet CONADIS', 
                 'descripcion' => 'Carnet CONADIS', // Opcional
                 'estado' => '1',
-                'created_at' => Carbon::now(), 
-                'updated_at' => Carbon::now()
+                
             ],
             [
                 'nombre' => 'Carnet de Extranjería', 
                 'descripcion' => 'Carnet de Extranjería', // Opcional
                 'estado' => '1',
-                'created_at' => Carbon::now(), 
-                'updated_at' => Carbon::now()
+                
             ],
             [
                 'nombre' => 'Pasaporte', 
                 'descripcion' => 'Pasaporte', // Opcional
                 'estado' => '1',
-                'created_at' => Carbon::now(), 
-                'updated_at' => Carbon::now()
+                
             ],
         ];
 
