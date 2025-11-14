@@ -103,7 +103,7 @@ class RegistrarController extends Controller
             'celular' => 'required|string|max:15',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
-            'url_logo' => 'nullable|file|mimes:jpg,jpeg,png,svg|max:25600',
+            'url_logo' => 'nullable|file|mimes:jpg,jpeg,png,svg|max:51200',
         ]);
 
         // 🔹 Crear nuevo usuario Empresa

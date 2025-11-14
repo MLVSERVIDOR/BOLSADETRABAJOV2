@@ -249,7 +249,7 @@
         <div class="row g-2 mt-2"> 
             <div class="col-md-12">
                 <label class="form-label">Carga de CV</label>
-                <small class="text-muted d-block mb-1">(Opcional. Formatos: PDF, DOC, DOCX. Tamaño máximo 25 MB)</small>
+                <small class="text-muted d-block mb-1">(Opcional. Formatos: PDF, DOC, DOCX. Tamaño máximo 500 MB)</small>
                 <input type="file" name="curriculum_vitae" class="form-control @error('curriculum_vitae', 'persona') is-invalid @enderror" accept=".pdf,.doc,.docx">
                 @error('curriculum_vitae', 'persona') <small class="text-danger">{{ $message }}</small> @enderror
             </div>

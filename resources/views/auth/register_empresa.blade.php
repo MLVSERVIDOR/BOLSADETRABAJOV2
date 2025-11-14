@@ -234,7 +234,7 @@
     <div class="row g-2 mt-2">
         <div class="col-md-12">
             <label class="form-label">Cargar Logo</label>
-            <small class="text-muted d-block mb-1">(Opcional. Formatos: JPG, PNG, JPEG, SVG. Tamaño máximo 25 MB)</small>
+            <small class="text-muted d-block mb-1">(Opcional. Formatos: JPG, PNG, JPEG, SVG. Tamaño máximo 50 MB)</small>
             <input type="file" name="url_logo" class="form-control @error('url_logo') is-invalid @enderror" accept=".jpg,.png,.jpeg,.svg">
             @error('url_logo') <small class="text-danger">{{ $message }}</small> @enderror
         </div>
