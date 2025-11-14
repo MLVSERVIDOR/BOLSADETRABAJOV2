@@ -265,7 +265,7 @@
             <label class="form-label">Tipo y Número de Documento</label>
             <div class="input-group">
                 <select name="id_tipo_documentos" class="form-select @error('id_tipo_documentos') is-invalid @enderror" required style="max-width: 120px;">
-                    <option value="">Tipo</option>
+                    <option value="" selected disabled>Tipo</option>
                     @foreach ($tipo_documento as $tipo)
                         <option value="{{ $tipo->id }}" {{ old('id_tipo_documentos') == $tipo->id ? 'selected' : '' }}>
                             {{ $tipo->nombre }}

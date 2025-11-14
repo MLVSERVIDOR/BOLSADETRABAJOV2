@@ -37,7 +37,7 @@ class RegistrarController extends Controller
             'celular' => 'required|string|max:15',
             'email' => 'required|email|unique:users,email|confirmed',
             'password' => 'required|min:6|confirmed',
-            'curriculum_vitae' => 'required|file|mimes:pdf,doc,docx|max:25600',
+            'curriculum_vitae' => 'required|file|mimes:pdf,doc,docx|max:512000',
         ]);
         // 🔹 Crear nuevo usuario
         $user = new User();
