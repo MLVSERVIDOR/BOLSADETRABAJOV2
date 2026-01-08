@@ -162,7 +162,7 @@
         {{-- <h2>LA VICTORIA</h2> --}}
       </div>
       
-      <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Logo Municipalidad de La Victoria">
+      <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Logo Municipalidad de La Victoria">
     </div>
 
     <!-- 🔹 Formulario -->

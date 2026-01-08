@@ -225,7 +225,7 @@
   <!-- HEADER -->
   <header>
     <div class="d-flex align-items-center">
-      <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Logo La Victoria">
+      <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Logo La Victoria">
       <span class="titulo">Portal de Empleos</span>
     </div>
 

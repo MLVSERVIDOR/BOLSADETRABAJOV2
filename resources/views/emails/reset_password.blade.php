@@ -95,7 +95,7 @@
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Municipalidad de La Victoria">
+      <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Municipalidad de La Victoria">
       <h1>Municipalidad de La Victoria</h1>
     </div>
 

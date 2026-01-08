@@ -203,7 +203,7 @@
         <i class="bi bi-arrow-left-circle-fill"></i> Atrás
       </a>
       <div class="title">
-        <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Logo">
+        <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Logo">
         Municipalidad de La Victoria
       </div>
     </div>

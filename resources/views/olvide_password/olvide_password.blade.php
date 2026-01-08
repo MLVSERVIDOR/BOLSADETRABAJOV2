@@ -11,7 +11,7 @@
     {{-- <a href="{{ route('login.index') }}" class="btn btn-light me-3">
       <i class="bi bi-arrow-left-circle-fill"></i> Atrás
     </a> --}}
-    <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Logo" style="height:42px;margin-right:10px;">
+    <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Logo" style="height:42px;margin-right:10px;">
     Municipalidad de La Victoria
   </header>
 

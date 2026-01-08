@@ -225,7 +225,7 @@
 
       <!-- 🔹 Logo y título -->
       <div class="title d-flex align-items-center ms-3" style="font-weight: 600; font-size: 1.1rem;">
-        <img src="{{ asset('images/imagenes/logo_muni_v2.png') }}" alt="Logo" style="height: 42px; margin-right: 10px;">
+        <img src="https://web.munilavictoria.gob.pe/mlv/assets/imgs/logo.png" alt="Logo" style="height: 42px; margin-right: 10px;">
         Municipalidad de La Victoria
       </div>
     </div>
